@@ -8,6 +8,8 @@ import style0 from './images/style0.jpeg';
 import style1 from './images/style1.jpeg';
 import style2 from './images/style2.jpeg';
 import Description from './components/description';
+import Pricing from './components/pricing';
+
 
 // features photos
 import gridMode from './images/gridMode.jpeg';
@@ -86,8 +88,10 @@ const App = () => {
 
         <div id='rightPanel'>
           <div id = 'header'>
-            <p id = 'versionText'>Version 1.0 Beta</p>
-            <button id="add-extension-btn">Add Extension</button>
+            <p id = 'versionText'>Version 1.1 Beta</p>
+            <a id = 'addExtLink' href="https://chromewebstore.google.com/detail/quickstyle/ligohbicjljofdplecggjoeancoonlhc?hl=en&authuser=0" target="_blank" rel="noopener noreferrer">
+                <button id="add-extension-btn">Add Extension</button>
+            </a>
           </div>
           <h1 id='slogan'>
             Your Site <strong>Appearance</strong> Means Everything
@@ -127,6 +131,7 @@ const App = () => {
       </div>
       
       <Description />
+      <Pricing />
 
     </div>
   );

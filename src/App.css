@@ -67,7 +67,7 @@
 
 }
 
-ul {
+#panels ul {
   width: 70%; 
   margin-bottom: 20px; 
   text-align: left;
@@ -97,8 +97,8 @@ html, body {
 } */
 
 body {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     animation: gradient 15s ease infinite;
+    height: auto; 
 }
 
 @keyframes gradient {
@@ -129,6 +129,32 @@ body {
   background-color: #f4f4f4;
 }
 
+#panels {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+/* @media (max-width: 200px) {
+
+  .business-name{
+    font-size: 3rem;
+    color: red; 
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .business-name{
+    font-size: 2rem;
+  }
+
+} */
+
+
+
 .left-panel {
   width: 30%;
   display: flex;
@@ -138,6 +164,7 @@ body {
   background-color: #ffffff;
   padding: 20px;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  height: 100vh; 
 }
 
 /* Updated #rightPanel to ensure content stays aligned */
@@ -149,17 +176,18 @@ body {
   justify-content: flex-start;
   margin: 0px; 
   padding: 0px; 
+  height: 100vh; 
   /* height: 300%;  */
   /* padding: 20px; */
 }
 
 #logo {
-  width: 300px;
+  width: 80%;
   height: auto;
 }
 
 .business-name {
-  font-size: 4rem;
+  font-size: 2rem;
   color: #333;
   margin-top: 20px;
   text-align: center;
@@ -173,16 +201,29 @@ body {
   text-align: left;
 }
 
+#addExtLink {
+  text-decoration: none;
+}
+
 /* Updated image-stack */
 .image-stack {
-  width: 70%; /* Full width of the container */
+  width: 80%; /* Full width of the container */
   max-width: 100%;
   position: relative; /* Relative positioning for stacking images inside */
   height: 300px; /* Set a fixed height for the container */
+  margin-top: 50px; 
   overflow: hidden; /* Prevents overflow */
   display: inline-block;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media(max-width: 800px){
+  .image-stack{
+    display: none; 
+  }
 }
 
 /* Adjusted fade-image */
