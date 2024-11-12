@@ -1,38 +1,409 @@
-.App {
-  text-align: center;
+/* src/App.css */
+
+/* src/App.css */
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css"; 
+
+/* Other styles... */
+
+.fade-enter {
+  opacity: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header {
+  display: flex; 
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%; 
+  /* margin: 25px; 
+  margin-right: 25px;  */
+  padding: 0px; 
+
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+
+#slogan {
+  font-size: 3rem;
+  background-color: #1e90ff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Make the gradient fill the text */
+  font-weight: 900;
+  text-align: left;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  margin: 20px 0;
+  width: 70%
+  
+}
+
+#slogan strong {
+  font-weight: 1200; /* Make the strong words bold */
+  color: #fcfcfc; /* Keep strong words pure white */
+  text-shadow: 3px 3px 7px rgba(201, 201, 255, 0.6); /* Emphasize the strong words with more shadow */
+}
+
+#paragraph {
+  width: 70%;
+  text-align: left;
+  color: black;
+  font-size: 1.5rem;
+  margin: 0px; 
+  margin-top: 20px; 
+  font-weight: bold;
+
+}
+
+ul {
+  width: 70%; 
+  margin-bottom: 20px; 
+  text-align: left;
+  color: #1e90ff; 
+  font-size: 1.5rem;
+}
+
+
+
+/* .fade-image {
+  width: 600px; 
+  height: 300px; 
+} */
+
+#logo {
+  width: 300px; 
+  height: 300px; 
+  border-radius: 50%;
+  display: inline-block; 
+}
+
+
+/* background style
+html, body {
+  width: 100%;
+  height:100%;
+} */
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+/* src/App.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 200vh;
+  background-color: #f4f4f4;
+}
+
+#panels {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.left-panel {
+  width: 30%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Updated #rightPanel to ensure content stays aligned */
+#rightPanel {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center; /* Centers content horizontally */
+  justify-content: flex-start;
+  margin: 0px; 
+  padding: 0px; 
+  /* height: 300%;  */
+  /* padding: 20px; */
+}
+
+#logo {
+  width: 300px;
+  height: auto;
+}
+
+.business-name {
+  font-size: 4rem;
+  color: #333;
+  margin-top: 20px;
+  text-align: center;
+}
+
+#price {
+  margin: 3px; 
+  padding: 0px; 
+  font-size: 25px; 
+  width: 70%; 
+  text-align: left;
+}
+
+/* Updated image-stack */
+.image-stack {
+  width: 70%; /* Full width of the container */
+  max-width: 100%;
+  position: relative; /* Relative positioning for stacking images inside */
+  height: 300px; /* Set a fixed height for the container */
+  overflow: hidden; /* Prevents overflow */
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+}
+
+/* Adjusted fade-image */
+.fade-image {
+  border-radius: 10px;
+  position: absolute; /* Absolute positioning to stack images */
+  top: 0; /* Align images at the top */
+  left: 0; /* Align images at the left */
+  width: 100%; /* Responsive width to fill the container */
+  height: 100%; /* Set height to match container */
+  opacity: 0; /* Start hidden */
+  /* margin: 0 100;  */
+  transition: opacity 1s ease-in-out; /* Smooth fade transition */
+}
+
+.fade-image.show {
+  opacity: 1; /* Show current image */
+}
+
+.fade-image.hide {
+  opacity: 0; /* Hide non-current images */
+}
+
+/* Style for the CTA text */
+#cta-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Adds a subtle shadow for emphasis */
+}
+
+#versionText {
+  margin: 15px; 
+}
+
+/* Style for the button */
+#add-extension-btn {
+  display: block;
+  /* margin: 30px auto; Centers the button horizontally */
+  margin: 15px; 
+  margin-left: auto; 
+  padding: 8px 16px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adds a shadow for depth */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Hover and active state for button */
+#add-extension-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+#add-extension-btn:active {
+  background-color: #003d80; /* Even darker blue on click */
+  transform: translateY(1px); /* Slight depress on click */
+}
+
+
+/* Styles for the button container */
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Styles for buttons */
+.button-container button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff; /* Blue background */
   color: white;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+/* Button hover effect */
+.button-container button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Content section styles */
+/* .content {
+  position: relative;
+  height: 150px;
+} */
+
+#context {
+  width:  100%; 
+  /* background-color: red; */
+  /* height: 100%;  */
+  justify-content: flex-end;
+  margin: 0px; 
+
 }
+
+#context > div{
+  margin: 30 0;  
+
+}
+
+
+
+/* Active content section */
+.content-section.active {
+  opacity: 1; /* Show active section */
+  visibility: visible; /* Make it visible */
+}
+
+
+.content-section {
+  /* padding: 20px; */
+  text-align: center;
+  background-color: #ffffff; /* Light background color */
+  color: black; 
+  height: 90%; 
+}
+
+
+#pHover {
+  transition: transform 0.4s ease; /* Transition for the default state */
+}
+
+#pHover:hover {
+  transform: scale(1.07, 1.07); /* Scale up on hover */
+}
+
+#pHover {
+  transform: scale(1); /* Ensure it starts at normal scale */
+}
+
+
+
+/* 
+li {
+  transition: transform 0.2s ease; 
+}
+
+li:hover {
+  transform: scale(1.07, 1.07); 
+}
+
+li {
+  transform: scale(1); 
+}
+
+ */
+
+.content-section > img {
+
+  max-width: 60%; 
+  height: auto; 
+  /* min-height: 40px;  */
+  display: inline-block;
+}
+
+/* src/App.css */
+
+/* Custom styling for the slider dots */
+.slick-dots {
+  bottom: 10px; /* Adjust the vertical position */
+  display: flex !important; /* Ensure flex display */
+  justify-content: center; /* Center the dots */
+  z-index: 10; /* Ensure it appears above other elements */
+}
+
+.slick-dots li {
+  margin: 0 5px; /* Adjust spacing between dots */
+}
+
+
+.slick-dots li button {
+  /* display; Make sure buttons are block level for easy clicking */
+  width: 12px; /* Adjust size as needed */
+  height: 12px; /* Adjust size as needed */
+  border-radius: 50%; /* Make them round */
+  background: gray; /* Default dot color */
+}
+
+.slick-dots li.slick-active button {
+  background: #fff; /* Color for the active dot */
+}
+
+
+.full-cost {
+  text-decoration: line-through; /* This will strike through the text */
+  color: rgb(255, 0, 0); /* Optional: Change the color to red or any color you prefer */
+  margin-right: 10px; /* Optional: Space between the full cost and beta cost */
+  margin-left: 10px; 
+}
+
+.beta-cost {
+  color: green; /* Optional: Change the color of the beta cost */
+}
+
+#descriptionTitle{
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+}
+
+#changingTitleType {
+  margin-left: 10px; 
+  margin-right: 10px; 
+}
+
+#descriptionDiv{
+  margin-top: 200px; 
+}
+
+#descriptionText {
+  width: 60%;
+}
+
