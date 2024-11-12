@@ -1,7 +1,6 @@
 // src/App.js
 import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import Slider from 'react-slick'; // Import the Slider component
 import './App.css'; // Custom CSS for styles
 import logo from './images/quickStyleLogo.png';
 import style0 from './images/style0.jpeg';
@@ -11,10 +10,7 @@ import Description from './components/description';
 import Pricing from './components/pricing';
 
 
-// features photos
-import gridMode from './images/gridMode.jpeg';
-import hoverEffects from './images/hoverEffects.jpeg';
-import mergeStyles from './images/mergeStyles.jpeg';
+
 
 
 
@@ -32,14 +28,7 @@ const App = () => {
   }, []);
 
   // Slider settings
-  const sliderSettings = {
-    infinite: true,
-    speed: 5000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 1000,
-  };
+
 
 
 
