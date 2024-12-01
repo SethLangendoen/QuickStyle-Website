@@ -11,15 +11,40 @@
 }
 
 #header {
+  position: absolute;
+  top: 0px; 
+  left: 0px; 
   display: flex; 
   align-items: center;
   justify-content: flex-end;
   width: 100%; 
+  z-index: 10; 
   /* margin: 25px; 
   margin-right: 25px;  */
   padding: 0px; 
 
   
+}
+
+#videoDiv{display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  #logo:hover{
+    transform: rotate(360deg); 
+    transition: transform 0.8s ease; 
+  }
+  
+  video{width: 70%;
+    border-radius: 50px;
+  }
+
+#rightPanelContent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .fade-enter-active {
@@ -38,22 +63,48 @@
 
 
 #slogan {
-  font-size: 3rem;
-  background-color: #1e90ff;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Make the gradient fill the text */
+  font-size: 4rem;
+  /* background-color: #1e90ff; */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; Make the gradient fill the text */
+  color: rgb(41, 41, 255);
   font-weight: 900;
   text-align: left;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+  text-shadow: 4px 4px 5px rgba(3, 0, 92, 0.1); /* Add a subtle shadow for depth */
   margin: 20px 0;
-  width: 70%
-  
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 #slogan strong {
-  font-weight: 1200; /* Make the strong words bold */
-  color: #fcfcfc; /* Keep strong words pure white */
-  text-shadow: 3px 3px 7px rgba(201, 201, 255, 0.6); /* Emphasize the strong words with more shadow */
+  font-size: 8rem;
+  font-weight: 3000; /* Make the strong words bold */
+  /* text-shadow: 3px 3px 7px rgba(201, 201, 255, 0.6); Emphasize the strong words with more shadow */
+  text-shadow: 12px 12px 3px rgba(0, 0, 19, 0.3); /* Add a subtle shadow for depth */
+  color: rgb(218, 236, 253);
+
+
+}
+
+.pricing-container {
+  position: relative;
+  top: 0px;
+}
+
+#pricingTitle {background: linear-gradient(to right, rgb(104, 104, 255), blue);
+  color: transparent;
+  background-clip: text;
+  width: 320px;
+  top: 0px;
+  text-align: center;
+  font-size: 100px;
+  margin: 0px; 
+  margin-top: 100px; 
+  margin-bottom: 20px;
+
 }
 
 #paragraph {
@@ -62,19 +113,24 @@
   color: black;
   font-size: 1.5rem;
   margin: 0px; 
-  margin-top: 20px; 
   font-weight: bold;
 
 }
 
 #panels ul {
-  width: 70%; 
+  width: 100%; 
   margin-bottom: 20px; 
   text-align: left;
   color: #1e90ff; 
-  font-size: 1.5rem;
+  font-size: 2rem;
+  padding: 0px;
+  color: rgb(218, 236, 253);
+
 }
 
+.contentItem > ul {
+  list-style-type: none;
+}
 
 
 /* .fade-image {
@@ -83,12 +139,22 @@
 } */
 
 #logo {
+  min-width: 300px; 
   width: 300px; 
   height: 300px; 
   border-radius: 50%;
-  display: inline-block; 
+  display: inline-block;
+  margin: 0px; 
+  padding: 0px; 
+
 }
 
+.top-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
 
 /* background style
 html, body {
@@ -118,22 +184,20 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  height: 200vh;
+  height: auto;
   background-color: #f4f4f4;
+  justify-content: flex-start;
+  align-items: center;
 }
+
 
 #panels {
   display: flex;
   flex-direction: row;
   height: 100vh;
   background-color: #f4f4f4;
-}
+  box-shadow: 0 8px 6px -6px black;
 
-#panels {
-  display: flex;
-  flex-direction: row;
-  height: 100vh;
-  background-color: #f4f4f4;
 }
 
 /* @media (max-width: 200px) {
@@ -153,6 +217,38 @@ body {
 
 } */
 
+/* Initial arrow style */
+.arrow {
+  transition: transform 0.8s ease;
+}
+
+.arrow.rotate {
+  transform: rotate(180deg); /* Rotate 180 degrees when clicked */
+}
+
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 1s ease; /* Adds a smooth transition effect */
+}
+
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 10s ease; /* Adds a smooth transition effect */
+}
+
+
 
 
 .left-panel {
@@ -162,9 +258,9 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #ffffff;
-  padding: 20px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 0px 6px -6px black;
   height: 100vh; 
+  z-index: 1000;
 }
 
 /* Updated #rightPanel to ensure content stays aligned */
@@ -173,25 +269,76 @@ body {
   flex-direction: column;
   width: 70%;
   align-items: center; /* Centers content horizontally */
-  justify-content: flex-start;
+  justify-content: center;
+  position: relative; 
   margin: 0px; 
   padding: 0px; 
   height: 100vh; 
+  background: linear-gradient(to bottom right, #4e8cff, #0029ff);
   /* height: 300%;  */
   /* padding: 20px; */
+
 }
 
-#logo {
-  width: 80%;
-  height: auto;
+#contentWrapper {
+  display: flex;
+  overflow: hidden;
+  width: 100%; /* Adjust width as needed */
 }
+
+#contentContainer {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.contentItem {
+  
+  
+  min-width: 100%; /* Each piece of content takes up 100% of the container width */
+  box-sizing: border-box;
+  padding: 10%; 
+}
+
+
+
+.contentItem > img {
+  width: 100%; 
+  height: auto; 
+  box-shadow: 10px 10px 4px rgba(0, 0, 0, 0.5); 
+}
+
+
+
 
 .business-name {
-  font-size: 2rem;
-  color: #333;
+  font-size: 50px;
   margin-top: 20px;
   text-align: center;
+  font-weight: bold;
+  background: linear-gradient(
+    to right,
+    rgb(218,236,253) 3%, /* Light color appears quickly */
+    rgb(10,78,152) 95%, /* Dark color lingers longer */
+    rgb(218,236,253) 97% /* Light color appears briefly again */
+  );
+  background-size: 300%; /* Wider gradient for a continuous effect */
+  background-clip: text;
+  -webkit-background-clip: text; /* Required for WebKit browsers */
+  color: transparent; /* Text itself is invisible */
+  animation: slideGradient 9s linear infinite; /* Linear for smooth motion */
 }
+
+@keyframes slideGradient {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -300% 0%; /* Move completely through the gradient */
+  }
+}
+
+
+
 
 #price {
   margin: 3px; 
@@ -447,4 +594,6 @@ li {
 #descriptionText {
   width: 60%;
 }
+
+/* ------------------------------- styling between pricing and panels ------------ */ 
 
