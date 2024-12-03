@@ -83,7 +83,7 @@
 	color: #888;
   }
   
-  .pricing-card ul li.unavailable {
+  .pricing-card ul li {
 	color: #888;
   }
   
@@ -122,10 +122,27 @@
   /* Special checkmark style */
   .special-check {
 	color: #28a745;
-	font-size: 18px;
+	font-size: 22px;
 	margin-right: 10px;
 	font-weight: bold;
   }
+
+  /* .pricing-car.styleTools {
+	margin: 0px; 
+	margin-left: 50px; 
+	
+  } */
+
+  .pricing-card .advancedFeature{
+	font-size: 22px; 
+	font-weight: bold; 
+	color: white; 
+  }
+
+  .pricing-card .unavailable{
+	font-size: 20px; 
+	font-weight: bold; 
+}
   
   /* Badge for "POPULAR" */
   .popular-badge {
@@ -140,6 +157,7 @@
 	font-weight: bold;
 	font-size: 14px;
   }
+
   
   /* Updated badge */
   .updated-badge {

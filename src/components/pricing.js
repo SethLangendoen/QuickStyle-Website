@@ -13,22 +13,24 @@ export default function Description() {
 					2000 Tokens
 				</div>
 				<ul>
-					<li>&#10003; Basic Styling Tools</li>
+				<li>&#10003; Basic Styling Tools</li>
 					<li>&#10003; Color Customization</li>
 					<li>&#10003; Text Styling</li>
+					<li>&#10003; position Options</li>
 					<li>&#10003; Sizing Options</li>
 					<li>&#10003; Flexbox Layout</li>
 					<li>&#10003; Hover Effects Customization</li>
 					<li>&#10003; Border Styling Options</li>
+					<li class="unavailable">&#10060; Limited Presets / Animations </li>
 					<li class="unavailable">&#10060; AI Style Generator</li>
 					<li class="unavailable">&#10060; Limited Tokens</li>
-					<li class="unavailable">&#10060; Merge Multiple Styles</li>
+					<li class="unavailable">&#10060; Merge &amp; Copy Styles</li>
 					<li class="unavailable">&#10060; Priority Support</li>
 					<li class="unavailable">&#10060; Early Access to New Features</li>
 				</ul>
-				<div class="cta" id="continueFree">
+				{/* <div class="cta" id="continueFree">
 					<i class="fas fa-bolt"></i> Continue Free
-				</div>
+				</div> */}
 				<div class="footer">
 					Perfect for basic styling needs!
 				</div>
@@ -45,19 +47,22 @@ export default function Description() {
 					<li>&#10003; Basic Styling Tools</li>
 					<li>&#10003; Color Customization</li>
 					<li>&#10003; Text Styling</li>
+					<li>&#10003; position Options</li>
 					<li>&#10003; Sizing Options</li>
 					<li>&#10003; Flexbox Layout</li>
 					<li>&#10003; Hover Effects Customization</li>
 					<li>&#10003; Border Styling Options</li>
-					<li><span class="special-check">&#10003;</span> AI Style Generator </li>
-					<li><span class="special-check">&#10003;</span> Unlimited tokens </li>
-					<li><span class="special-check">&#10003;</span> Merge Multiple Styles</li>
-					<li><span class="special-check">&#10003;</span> Priority Support</li>
-					<li><span class="special-check">&#10003;</span> Early Access to New Features</li>
+					<li class = 'advancedFeature'><span class="special-check">&#10003;</span> All Presets / Animations </li>
+
+					<li class = 'advancedFeature'><span class="special-check">&#10003;</span> AI Style Generator </li>
+					<li class = 'advancedFeature'><span class="special-check">&#10003;</span> Unlimited tokens </li>
+					<li class = 'advancedFeature'><span class="special-check">&#10003;</span> Merge Styles</li>
+					<li class = 'advancedFeature'><span class="special-check">&#10003;</span> Priority Support</li>
+					<li class = 'advancedFeature'><span class="special-check">&#10003;</span> Early Access to New Features</li>
 				</ul>
-				<div class="cta" id="getPremium">
+				{/* <div class="cta" id="getPremium">
 					<i class="fas fa-bolt"></i> Get Premium
-				</div>
+				</div> */}
 				<div class="footer">
 					Build with unlimited features!
 				</div>

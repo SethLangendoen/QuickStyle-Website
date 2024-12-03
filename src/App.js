@@ -4,6 +4,9 @@ import logo from './images/quickStyleLogo.png';
 
 import Description from './components/description';
 import Pricing from './components/pricing';
+import AboutDeveloper from './components/AboutDeveloper';
+
+
 import image1 from './images/slide1.png';
 import image2 from './images/slide2.png';
 import image3 from './images/slide3.png';
@@ -65,7 +68,7 @@ const App = () => {
   return (
     <div className="container">
       <div id="header">
-        <p id="versionText">Version 1.3</p>
+        <p id="versionText">Version 1.40</p>
         <a
           id="addExtLink"
           href="https://chromewebstore.google.com/detail/quickstyle/ligohbicjljofdplecggjoeancoonlhc?hl=en&authuser=0"
@@ -116,6 +119,7 @@ const App = () => {
         Pricing
       </h1>
       <Pricing />
+      <AboutDeveloper />
     </div>
   );
 };
